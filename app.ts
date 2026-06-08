@@ -19,8 +19,10 @@ app.use(cors(
 
 import serverRouter from "./routes/serverHealth.route";
 import { errorHandler } from "./middlewares/errorHandler.middleware";
+import { signup } from "./controllers/user.controller";
 
 app.use("/api/v1/server", serverRouter)
+app.use("/api/v1/user", signup)
 
 app.use(
   (

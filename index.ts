@@ -1,8 +1,8 @@
-import prismaDBClient from "./db/connectToDB";
+import {client} from "./db/connectToDB"
 import app from "./app";
 const listenPort = process.env.PORT
 
-prismaDBClient
+client
 .$connect()
 .then(() => {
     console.log(`Connected to database successfully`);
